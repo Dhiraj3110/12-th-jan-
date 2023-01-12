@@ -1,0 +1,22 @@
+Write a C++ program to remove "the" from a given string. Eg: Up there is the car O/p: there is car
+
+
+#include <iostream>
+using namespace std;
+
+int main(){
+   string s="he is the king of dogs";
+   int l=end(s)-begin(s);
+   for(int i=0;i<l;i++){
+       if(s[i]=='t'){
+           if(s[i+1]=='h'){
+               if(s[i+2]=='e'){
+                   i=i+3;
+               }
+           }
+       }
+       cout<<s[i];
+   }
+  
+    
+}
