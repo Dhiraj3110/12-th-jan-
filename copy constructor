@@ -1,0 +1,33 @@
+Create a class with copy constructor and two private data members of integer type and a member function to input values for data members:
+
+#include <iostream>
+using namespace std;
+
+class Number{
+public:
+int a;
+Number(){
+    a=0;
+}
+Number(int num){
+    a=num;
+}
+Number(Number &obj){
+    cout<<"copy constructor"<<endl;
+    a=obj.a;
+}
+
+void display(){
+    cout<<"display";
+}
+
+};
+
+int main(){
+    Number x,y,z(1);
+    
+    Number z1(x);
+    z1.display();
+    
+    return 0;
+}
